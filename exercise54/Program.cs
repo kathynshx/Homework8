@@ -43,19 +43,19 @@ void RowSortMatrix(int[,] matr)
     }
 }
 
-void PrintMatrix(int[,] matrix)
-{
-    for (int n = 0; n < matrix.GetLength(0); n++)
-    {
-        Console.Write("|");
-        for (int j = 0; j < matrix.GetLength(1); j++)
-        {
-            if (j < matrix.GetLength(1) - 1) Console.Write($"{matrix[n, j],4}, ");
-            else Console.Write($"{matrix[n, j],4}");
-        }
-        Console.WriteLine("|");
-    }
-}
+void PrintMatrix(int[,] matrix) 
+{ 
+    for (int i = 0; i < matrix.GetLength(0); i++) 
+    { 
+        Console.Write("|"); 
+        for (int j = 0; j < matrix.GetLength(1); j++) 
+        { 
+            if (j < matrix.GetLength(1) - 1) Console.Write($"{matrix[i, j],4}, "); 
+            else Console.Write($"{matrix[i, j],4} "); 
+        } 
+        Console.WriteLine("|"); 
+    } 
+} 
 
 int[,] array2D = CreateMatrixRndInt(4, 10, 1, 10);
 PrintMatrix(array2D);
